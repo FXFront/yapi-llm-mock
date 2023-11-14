@@ -1,5 +1,5 @@
 {
-  "name": "yapi-llm-mock",
+  "name": "@fx-front/yapi-llm-mock",
   "version": "0.0.0",
   "description": "使用 LLM，将 YAPI 文档生成为本地的 Mock 文件。",
   "keywords": [
@@ -89,7 +89,7 @@
     "release-it": "^16.1.5",
     "typechat": "^0.0.10",
     "typescript": "^5.1.6",
-    "unbuild": "^1.2.1"
+    "unbuild": "^1.--scope=@organization2.1"
   },
   "packageManager": "pnpm@7.13.2",
   "engines": {
@@ -97,6 +97,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "scope": "@fx-front"
   }
 }

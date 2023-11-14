@@ -554,7 +554,7 @@ export interface Config {
   mockPrefix?: string;
 
   /**
-   * 给 LLM 的类型提示文件路径。默认为 `yapi-llm-mock/lib/assets/mockSchema.ts`。
+   * 给 LLM 的类型提示文件路径。默认为 `@fx-front/yapi-llm-mock/lib/assets/mockSchema.ts`。
    *
    * 可以是 `相对路径` 或 `绝对路径`。
    *
@@ -571,7 +571,7 @@ export interface Config {
    *
    * 如果配置了 `mockSchemaPath`，则此配置项无效。
    *
-   * 此配置项会与 `yapi-llm-mock/lib/assets/mockSchema.ts` 进行合并，然后将合并后的结果传输给 LLM。
+   * 此配置项会与 `@fx-front/yapi-llm-mock/lib/assets/mockSchema.ts` 进行合并，然后将合并后的结果传输给 LLM。
    *
    * 格式为 typescript 类型字符串。
    *
@@ -711,7 +711,7 @@ export interface Config {
    * ```js
    * `
    * import mockjs from 'mockjs';
-   * import { defineMock } from 'yapi-llm-mock';
+   * import { defineMock } from '@fx-front/yapi-llm-mock';
    * `
    * ```
    */

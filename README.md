@@ -1,4 +1,4 @@
-# yapi-llm-mock
+# @fx-front/yapi-llm-mock
 
 <br>
 <br>
@@ -10,9 +10,9 @@
 
 <br>
 <p align="center">
-<a href="https://www.npmjs.com/package/yapi-llm-mock"><img alt="npm" src="https://img.shields.io/npm/v/yapi-llm-mock?style=flat-square"></a>
-<img alt="node-current" src="https://img.shields.io/node/v/yapi-llm-mock?style=flat-square">
-<img alt="npm" src="https://img.shields.io/npm/dt/yapi-llm-mock?style=flat-square">
+<a href="https://www.npmjs.com/package/@fx-front/yapi-llm-mock"><img alt="npm" src="https://img.shields.io/npm/v/@fx-front/yapi-llm-mock?style=flat-square"></a>
+<img alt="node-current" src="https://img.shields.io/node/v/@fx-front/yapi-llm-mock?style=flat-square">
+<img alt="npm" src="https://img.shields.io/npm/dt/@fx-front/yapi-llm-mock?style=flat-square">
 <br>
 </p>
 <br>
@@ -38,13 +38,13 @@
 
 ```bash
 # npm
-npm i yapi-llm-mock mockjs @types/mockjs -D
+npm i @fx-front/yapi-llm-mock mockjs @types/mockjs -D
 
 # yarn
-yarn add yapi-llm-mock mockjs @types/mockjs -D
+yarn add @fx-front/yapi-llm-mock mockjs @types/mockjs -D
 
 # pnpm
-pnpm add yapi-llm-mock mockjs @types/mockjs -D
+pnpm add @fx-front/yapi-llm-mock mockjs @types/mockjs -D
 ```
 
 ## 使用
@@ -95,7 +95,7 @@ npx ylm serve
 
 ```ts
 // ylm.config.ts
-import { defineConfig } from 'yapi-llm-mock';
+import { defineConfig } from '@fx-front/yapi-llm-mock';
 
 export default defineConfig({
   yapi: {
@@ -254,7 +254,7 @@ mock 接口前缀。
 - 类型：`${string}.ts`
 - 默认值：`'assets/mockSchema.ts'`
 
-给 LLM 的类型提示文件路径。默认为 `yapi-llm-mock/lib/assets/mockSchema.ts`。
+给 LLM 的类型提示文件路径。默认为 `@fx-front/yapi-llm-mock/lib/assets/mockSchema.ts`。
 
 如果配置了此项，请确保文件中有 `MockResponse` 和 `ResponseBodyType` 两个类型。
 
@@ -269,7 +269,7 @@ mock 接口前缀。
 
 如果配置了 [`mockSchemaPath`](#mockschemapath)，则此配置项无效（因为可以在 `mockSchemaPath` 指向的文件中配置 `ResponseBodyType` 类型）。
 
-此配置项会与 `yapi-llm-mock/lib/assets/mockSchema.ts` 进行合并，然后将合并后的结果传输给 LLM。
+此配置项会与 `@fx-front/yapi-llm-mock/lib/assets/mockSchema.ts` 进行合并，然后将合并后的结果传输给 LLM。
 
 格式为 typescript 类型字符串。
 
@@ -480,7 +480,7 @@ function mockImportStatement: (): string
 ```ts
 `
 import mockjs from 'mockjs';
-import { defineMock } from 'yapi-llm-mock';
+import { defineMock } from '@fx-front/yapi-llm-mock';
 `;
 ```
 
@@ -533,7 +533,7 @@ function processMockResult: (mockResult: any, interfaceInfo: Interface): void;
 
 ## Mock 插件/中间件
 
-yapi-llm-mock 提供了 vite 和 webpack 的 mock 插件/中间件，其他项目中可以使用 `npx ylm serve` 来启动独立部署的 mock 服务。
+@fx-front/yapi-llm-mock 提供了 vite 和 webpack 的 mock 插件/中间件，其他项目中可以使用 `npx ylm serve` 来启动独立部署的 mock 服务。
 
 ### `viteMockPlugin`
 
@@ -552,7 +552,7 @@ vite mock 插件。
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite';
-import { viteMockPlugin } from 'yapi-llm-mock';
+import { viteMockPlugin } from '@fx-front/yapi-llm-mock';
 export default defineConfig({
   plugins: [..., viteMockPlugin()],
 });
@@ -577,7 +577,7 @@ webpack mock 中间件。
 
 ```ts
 // webpack.config.js
-const { webpackMockMiddleware } = require('yapi-llm-mock');
+const { webpackMockMiddleware } = require('@fx-front/yapi-llm-mock');
 module.exports = {
   devServer: {
     onBeforeSetupMiddleware: async devServer => {

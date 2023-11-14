@@ -302,7 +302,7 @@ export class Generator {
       console.log();
       consola.info(indent`可使用以下方法来处理未生成的接口：
 
-1. 调整 Prompt，然后重新生成。 🔗 \`https://github.com/FXFront/yapi-llm-mock#mockschemapath\`
+1. 调整 Prompt，然后重新生成。 🔗 \`https://github.com/FXFrontyapi-llm-mock#mockschemapath\`
 2. 在配置文件中的 mock 服务/插件/中间件配置中，通过 \`overwrite\` 方法来自定义以上接口。 🔗 \`https://github.com/FXFront/yapi-llm-mock#mockserver\`
 3. 如果接口响应数据超出了 LLM 的 tokens 上限，也可尝试在配置文件中来调整 tokens 上限来解决。🔗 \`https://github.com/FXFront/yapi-llm-mock#llmtokens\`
       `);
@@ -328,7 +328,7 @@ export class Generator {
             this.config?.mockImportStatement?.() ??
             `
 					import mockjs from 'mockjs';
-					import { defineMock } from 'yapi-llm-mock';
+					import { defineMock } from '@fx-front/yapi-llm-mock';
 					`
           }
        
